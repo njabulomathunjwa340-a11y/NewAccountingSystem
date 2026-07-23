@@ -13,18 +13,22 @@
     <div>
     <h3>Modules</h3>
 
-    <button onclick="openSales()">Sales</button>
-    <button>Expenses</button>
-    <button>Cash</button>
-    <button>Bank</button>
-    <button>Inventory</button>
-    <button>Debtors</button>
-    <button>Liabilities</button>
-</div>
-<script>
 
+<button onclick="openSales()">Sales</button>
+<button onclick="openPurchases()">Purchases</button>
+<button>Expenses</button>
+<button>Tax</button>
+<button>Reports</button>
+<button>Settings</button>
+</div>
+
+<script>
 function openSales() {
     window.location.href = "sales.html";
+}
+
+function openPurchases() {
+    window.location.href = "purchases.html";
 }
 </script>
 
