@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expenses - New Accounting System</title>
+</head>
+
+<body>
+
+<h1>Expenses</h1>
+
+<label>Expense Name</label><br>
+<input type="text" id="expenseName" placeholder="Enter Expense Name">
+
+<br><br>
+
+<label>Date</label><br>
+<input type="date" id="expenseDate">
+
+<br><br>
+
+<label>Amount</label><br>
+<input type="number" id="expenseAmount" placeholder="Enter Amount">
+
+<br><br>
+
+<button onclick="saveExpense()">Save Expense</button>
+
+<p id="message"></p>
+
+<br>
+
+<a href="dashboard.html">Back to Dashboard</a>
+
+<script>
+
+function saveExpense() {
+
+    const name = document.getElementById("expenseName").value;
+    const date = document.getElementById("expenseDate").value;
+    const amount = document.getElementById("expenseAmount").value;
+
+    if (name === "" || date === "" || amount === "") {
+        alert("Please complete all fields.");
+        return;
+    }
+
+    document.getElementById("message").innerHTML =
+        "Expense saved successfully.";
+
+}
+
+</script>
+
+</body>
+</html>
