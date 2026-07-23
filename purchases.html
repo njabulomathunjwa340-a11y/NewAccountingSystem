@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purchases - New Accounting System</title>
+</head>
+
+<body>
+
+<h1>Purchases</h1>
+
+<label>Supplier</label><br>
+<input type="text" id="supplierName" placeholder="Supplier Name">
+
+<br><br>
+
+<label>Date</label><br>
+<input type="date" id="purchaseDate">
+
+<br><br>
+
+<label>Purchase Amount</label><br>
+<input type="number" id="purchaseAmount" placeholder="Enter Amount">
+
+<br><br>
+
+<button onclick="savePurchase()">Save Purchase</button>
+
+<p id="message"></p>
+
+<br>
+
+<a href="dashboard.html">Back to Dashboard</a>
+
+<script>
+
+function savePurchase() {
+
+    const supplier = document.getElementById("supplierName").value;
+    const date = document.getElementById("purchaseDate").value;
+    const amount = document.getElementById("purchaseAmount").value;
+
+    if (supplier === "" || date === "" || amount === "") {
+        alert("Please complete all fields.");
+        return;
+    }
+
+    document.getElementById("message").innerHTML =
+        "Purchase saved successfully.";
+
+}
+
+</script>
+
+</body>
+</html>
