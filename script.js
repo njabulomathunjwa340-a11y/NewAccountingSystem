@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         alert("Welcome to New Accounting System, " + username + "!");
 
-            // Open dashboard after successful login
+        // Open dashboard after successful login
         window.location.href = "dashboard.html";
 
 });
