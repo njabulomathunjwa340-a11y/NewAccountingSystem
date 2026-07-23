@@ -3,7 +3,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const loginButton = document.querySelector("button");
+    const loginButton = document.getElementById("loginButton");
 
     loginButton.addEventListener("click", function () {
 
