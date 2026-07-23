@@ -9,20 +9,45 @@
 <h1>Sales Recording</h1>
 
 <label>Date:</label>
-<input type="date">
+<input type="date" id="saleDate">
 
 <br><br>
 
 <label>Amount:</label>
-<input type="number" placeholder="Enter sales amount">
+<input type="number" id="saleAmount" placeholder="Enter sales amount">
 
 <br><br>
 
-<button>Save Sale</button>
+<button onclick="saveSale()">Save Sale</button>
 
-<br><br>
+<p id="message"></p>
+
+<br>
 
 <a href="dashboard.html">Back to Dashboard</a>
+
+
+<script>
+
+function saveSale() {
+
+    const date = document.getElementById("saleDate").value;
+    const amount = document.getElementById("saleAmount").value;
+
+    if (date === "" || amount === "") {
+        alert("Please enter date and amount.");
+        return;
+    }
+
+    localStorage.setItem("lastSaleDate", date);
+    localStorage.setItem("lastSaleAmount", amount);
+
+    document.getElementById("message").innerHTML =
+    "Sale saved successfully: " + amount;
+
+}
+
+</script>
 
 </body>
 </html>
